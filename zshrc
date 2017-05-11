@@ -1,3 +1,5 @@
+# -*- coding: utf-8 mode: sh -*-
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 setopt appendhistory
@@ -60,3 +62,5 @@ if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 export GOROOT=/mingw64/lib/go
 export GOPATH=~/.go
 
+# Local configuration
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
