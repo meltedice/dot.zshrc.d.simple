@@ -25,8 +25,8 @@ export PERL_BADLANG=0
 export EDITOR='vi'
 export VISUAL='vi'
 export PAGER='less -FRSX'
-export SVN_EDITOR="vi"
-export GIT_EDITOR="vi"
+export SVN_EDITOR="vim"
+export GIT_EDITOR="vim"
 export GIT_PAGER='less -FRSX'
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 
@@ -64,3 +64,6 @@ export GOPATH=~/.go
 
 # Local configuration
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
+# yarn
+[[ -d $HOME/.yarn ]] && export PATH="$HOME/.yarn/bin:$PATH"
