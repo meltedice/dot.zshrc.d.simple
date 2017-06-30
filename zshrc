@@ -44,6 +44,8 @@ alias lla='ls -hlA --color'
 alias count-files='find . -maxdepth 1 -type d | sort | while read -r d; do printf "%5d  %s\n" `find "$d" -type f | wc -l` $d; done'
 alias count-files-du='find . -maxdepth 1 -type d | sort | while read -r d; do printf "%+7s  %7d  %s\n" `du -s "$d" | cut -f1` `find "$d" -type f | wc -l` $d; done'
 alias be='bundle exec'
+alias yarn="PATH=/c/Git/cmd/:\$PATH yarn"
+alias npm="PATH=/c/Git/cmd/:\$PATH npm"
 
 # http://0xcc.net/unimag/3/
 # Share command history between terminals
