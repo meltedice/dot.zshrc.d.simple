@@ -33,6 +33,7 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 HISTSIZE=100000
 SAVEHIST=500000
 
+alias vi="vim"
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
@@ -62,10 +63,23 @@ if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Go
 export GOROOT=/mingw64/lib/go
-export GOPATH=~/.go
+export GOPATH=~/go
 
 # Local configuration
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
 
 # yarn
 [[ -d $HOME/.yarn ]] && export PATH="$HOME/.yarn/bin:$PATH"
+
+# colors
+autoload -Uz colors
+colors
+# PROMPT="(%n@%m)[%h] %~ %% "
+# PROMPT="${fg[green]}%n@%m[%h] %~ %%${fg[reset_colors]} "
+# for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
+# PROMPT="%F{042}%n@%m[%h] %~ %%%f "
+# PROMPT="%n@%m[%h] %~ %% "
+# PS1='%n@%m[%h] %~ %% '
+# PS1=$'\e[1;32m%n@%m[%h] %~ %% \e[0m'
+# PROMPT=$'\e[1;32m%n@%m[%h] %~ %% \e[0m'
+PROMPT="%{$fg[green]%}%n@%m[%h] %~ %%%{$reset_color%} "
